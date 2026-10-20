@@ -1,0 +1,84 @@
+/* Basic page styling */
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+}
+
+.courses-section {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 8px;
+  color: #1e3a5f;
+}
+
+.intro {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Course cards arranged using CSS Grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.course-card {
+  padding: 20px;
+  border: 2px solid #b8c7d9;
+  border-radius: 8px;
+  background-color: white;
+  text-align: left;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.course-card:hover {
+  transform: translateY(-8px);
+  border-color: #2878b5;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h2 {
+  color: #2878b5;
+  font-size: 20px;
+}
+
+.course-card p {
+  min-height: 45px;
+  color: #555;
+  line-height: 1.5;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2878b5;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #174a70;
+}
+
+/* Make the cards fit smaller screens */
+@media (max-width: 800px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
